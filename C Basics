@@ -1,0 +1,76 @@
+#include <stdio.h>
+
+int main()
+{
+    // int a, k;
+    // printf("give me a number 100-999\n");
+    // scanf("%d", &a);
+
+    // k = a % 10 + ((a / 10) % 10) + a / 100;
+
+    // printf("the result is -> %d\n", k);
+
+
+    // printf("Last digit: %d\n", a % 10);
+    // printf("Tens digit: %d\n", ((a / 10) % 10));
+    // printf("Hundreds digit: %d\n", a / 100);
+
+
+
+    int num1, num2, sum, max, min;
+    printf("Enter thenumbers ->");
+    scanf("%d %d", &num1, &num2);
+    max = 1;
+    min = 1;
+
+
+
+    if (num1 == num2)
+    {
+        printf(" in this case both num1 and nbum2 are true");
+    }
+    else if (num1 > num2)
+    {
+        max = num1;
+        min = num2;
+    }
+    else
+    {
+        max = num2;
+        min = num1;
+    }
+
+    if (max%min==0)
+    {
+        printf("Answer is %d", max);
+    }
+    else
+    {
+
+    for (int i = 2; i != num1 * num2; i++)
+    {
+       
+        if ( (max * i) % min == 0)
+        {
+        printf("%d\n", max * i);
+        break;
+        }
+        
+        //printf("%d", i);
+    }
+    
+        //printf("Answer is : %d", min * max);
+    }
+
+
+
+
+    return 0;
+
+}  
+
+
+
+
+
+
